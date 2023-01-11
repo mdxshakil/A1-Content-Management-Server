@@ -10,6 +10,9 @@ app.use(cors());
 app.get('/content', async (req, res) => {
 res.status(200).send({message:'This is your content'})
 })
+app.get('/content/:id', async (req, res) => {
+res.status(200).send({message:'This is id'})
+})
 
 
 app.get('/', (req, res) => {
