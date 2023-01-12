@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 // connect to db
-const uri = process.env.CONNECTION_STRING;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.frmvlrq.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 async function run() {
     try {
@@ -45,7 +45,7 @@ run().catch(console.dir);
 
 
 app.get('/', (req, res) => {
-    res.send('Hello world - Server is running!!!!')
+    res.send('Hello world - Server is running greatly!!!!')
 })
 app.listen(port, () => {
     console.log(`Listening to port - ${port}`);
