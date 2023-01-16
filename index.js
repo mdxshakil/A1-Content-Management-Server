@@ -69,7 +69,7 @@ run().catch(console.dir);
 
 
 app.get('/', (req, res) => {
-    res.send('Hello world - Server is running greatly!!!!')
+    res.send('Hello world - Server is running!!!!')
 })
 app.listen(port, () => {
     console.log(`Listening to port - ${port}`);
